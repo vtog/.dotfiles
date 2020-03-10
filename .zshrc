@@ -53,7 +53,8 @@ bindkey -s '^l' 'clear\n'
 # Alias's
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'
-alias ll='ls -algh --group-directories-first --color=auto'
+alias la='ls -algh --group-directories-first'
+alias ll='ls -lgh --group-directories-first'
 alias reload='. ~/.zshrc'
 alias pmu='sudo pacman -Syy && sudo pkgfile --update'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -78,12 +79,18 @@ ZSH_HIGHLIGHT_STYLES[path_prefix]='none'
 # Configure MY prompt
 SPACESHIP_PROMPT_ADD_NEWLINE=true
 SPACESHIP_PROMPT_SEPARATE_LINE=true
-SPACESHIP_USER_SHOW=always
-SPACESHIP_HOST_SHOW=always
+SPACESHIP_PROMPT_FIRST_PREFIX_SHOW=true
 SPACESHIP_CHAR_SYMBOL=❯
 SPACESHIP_CHAR_SUFFIX=" "
+SPACESHIP_USER_SHOW=always
+SPACESHIP_USER_PREFIX="["
 SPACESHIP_USER_SUFFIX=""
+SPACESHIP_HOST_SHOW=always
 SPACESHIP_HOST_PREFIX=@
+SPACESHIP_HOST_SUFFIX=""
+SPACESHIP_DIR_PREFIX=" "
+SPACESHIP_DIR_SUFFIX="]"
+SPACESHIP_DIR_TRUNC="0"
 
 SPACESHIP_PROMPT_ORDER=(
   time          # Time stamps section
