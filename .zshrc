@@ -26,7 +26,9 @@ bindkey -v
 export KEYTIMEOUT=5
 bindkey "^?" backward-delete-char
 bindkey "^[[1~" beginning-of-line    # HOME key
+bindkey "^[[H" beginning-of-line     # HOME key
 bindkey "^[[4~" end-of-line          # END key
+bindkey "^[[F" end-of-line           # END key
 bindkey "^[[3~" delete-char          # DEL key
 bindkey "^[[5~" beginning-of-line    # PGUP key
 bindkey "^[[6~" end-of-line          # PGDN key
