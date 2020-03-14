@@ -25,13 +25,13 @@ setopt auto_cd
 bindkey -v
 export KEYTIMEOUT=5
 bindkey "^?" backward-delete-char
-bindkey "^[[1~" beginning-of-line    # HOME key
-bindkey "^[[H" beginning-of-line     # HOME key
-bindkey "^[[4~" end-of-line          # END key
-bindkey "^[[F" end-of-line           # END key
-bindkey "^[[3~" delete-char          # DEL key
-bindkey "^[[5~" beginning-of-line    # PGUP key
-bindkey "^[[6~" end-of-line          # PGDN key
+bindkey "^[[1~" beginning-of-line    # HOME key (Putty)
+bindkey "^[[H" beginning-of-line     # HOME key (st)
+bindkey "^[[4~" end-of-line          # END key (Putty and st)
+bindkey "^[[3~" delete-char          # DEL key (Putty)
+bindkey "^[[P" delete-char           # DEL key (st)
+bindkey "^[[5~" beginning-of-line    # PGUP key (Putty and st)
+bindkey "^[[6~" end-of-line          # PGDN key (Putty and st)
 
 # Adds a notification on the right hand side of the prompt when in Normal mode
 function zle-line-init zle-keymap-select {
@@ -45,7 +45,8 @@ zle -N zle-keymap-select
 # Edit line in vim buffer ctrl-e
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
-bindkey '^[[2~' edit-command-line    # INS key
+bindkey '^[[2~' edit-command-line    # INS key (Putty)
+bindkey '^[[4h' edit-command-line    # INS key (st)
 
 # Bindkey's
 bindkey '^r' history-incremental-pattern-search-backward
