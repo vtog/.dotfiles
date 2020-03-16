@@ -14,7 +14,7 @@ set $mod Mod4
 # Restor Wallpaper
 exec --no-startup-id nitrogen --restore
 
-# Start compton
+# Start picom (compton)
 exec --no-startup-id picom -b --config ~/.config/picom/picom.conf
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -111,8 +111,8 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "Home "
-set $ws2 "FireFox  "
+set $ws1 "1:Home "
+set $ws2 "2:FireFox  "
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
@@ -120,7 +120,7 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "VLC  "
+set $ws10 "10:VLC  "
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -188,9 +188,17 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
         position top
+        strip_workspace_numbers yes
 }
 
+# Disable window titlebars
+# for_window [class="^.*"] border pixel 2
+default_border pixel 2
+#hide_edge_borders smart
+
+# Set  inner/outer gaps
+gaps inner 5
+gaps outer 5
+
 bindsym $mod+shift+x exec i3lock
-
-
 
