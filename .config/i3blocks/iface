@@ -51,8 +51,8 @@ for flag in "$1" "$2"; do
 done
 
 if [[ "$IF" = "" ]] || [[ "$(cat /sys/class/net/$IF/operstate)" = 'down' ]]; then
-  echo "${LABEL}down" # full text
-  echo "${LABEL}down" # short text
+  echo "${LABEL}Down" # full text
+  echo "${LABEL}Down" # short text
   echo \#FF0000 # color
   exit
 fi
@@ -64,7 +64,11 @@ case $BLOCK_BUTTON in
   3) echo -n "$IPADDR" | xclip -q -se c ;;
 esac
 
+public_ip_host="http://ident.me"
+public_ip="$(curl -s --max-time 22 -w '\n' "$public_ip_host")"
+
 #------------------------------------------------------------------------
 
-echo "$LABEL$IPADDR" # full text
-echo "$LABEL$IPADDR" # short text
+echo "$LABEL$IPADDR / $public_ip" # full text
+echo "$LABEL$IPADDR / $public_ip" # short text
+echo \#00FF00 # color
