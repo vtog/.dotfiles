@@ -1,5 +1,5 @@
 [options]
-#allow_bold = true
+allow_bold = true
 #audible_bell = false
 #bold_is_bright = true
 #cell_height_scale = 1.0
@@ -66,10 +66,13 @@ color3 = #dfaf8f
 color4 = #506070
 color5 = #dc8cc3
 color6 = #8cd0d3
-color7 = #dcdccc
+#color7 = #dcdccc
+color7 = white
 color8 = #709080
-color9 = #dca3a3
-color10 = #c3bf9f
+#color9 = #dca3a3
+color9 = red
+#color10 = #c3bf9f
+color10 = green
 color11 = #f0dfaf
 color12 = #94bff3
 color13 = #ec93d3
