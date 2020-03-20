@@ -12,7 +12,8 @@
 set $mod Mod4
 
 # Start picom (compton)
-exec --no-startup-id picom -f -b --config ~/.config/picom/picom.conf
+#exec --no-startup-id picom -f -b --config ~/.config/picom/picom.conf
+exec --no-startup-id xcompmgr -c -f
 
 # Restor Wallpaper
 exec --no-startup-id nitrogen --restore
@@ -191,16 +192,19 @@ bar {
         status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
         position top
         strip_workspace_numbers yes
+        height 25
 }
 
 # Disable window titlebars
 # for_window [class="^.*"] border pixel 2
-#default_border pixel 0
+default_border pixel 2
 #hide_edge_borders smart
 
 # Set  inner/outer gaps
 gaps inner 5
-gaps outer 5
+gaps outer 0
 
 bindsym $mod+shift+x exec i3lock
+bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
+bindsym --release Num_Lock exec pkill -SIGRTMIN+11 i3blocks
 
