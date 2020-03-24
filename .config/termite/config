@@ -47,7 +47,7 @@ scrollbar = off
 #cursor = #dcdccc
 #cursor_foreground = #dcdccc
 
-#foreground = #dcdccc
+foreground = #ffffff
 #foreground_bold = #ffffff
 #background = #3f3f3f
 
@@ -66,13 +66,12 @@ color3 = #dfaf8f
 color4 = #506070
 color5 = #dc8cc3
 color6 = #8cd0d3
-#color7 = #dcdccc
-color7 = white
+color7 = #dcdccc
 color8 = #709080
 #color9 = #dca3a3
-color9 = red
+color9 = #ff0000
 #color10 = #c3bf9f
-color10 = green
+color10 = #00ff00
 color11 = #f0dfaf
 color12 = #94bff3
 color13 = #ec93d3
