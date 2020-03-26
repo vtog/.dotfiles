@@ -1,5 +1,6 @@
 clear
 neofetch
+echo $TERM
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -55,6 +56,8 @@ bindkey -s '^h' 'history\n'
 bindkey -s '^l' 'clear\n'
 
 # Alias's
+alias vi='nvim'
+alias vim='nvim'
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'
 alias la='ls -algh --group-directories-first'
