@@ -12,8 +12,8 @@
 set $mod Mod4
 
 # Start picom (compton)
-exec --no-startup-id picom -f -b --config ~/.config/picom/picom.conf
-#exec --no-startup-id xcompmgr -c -f
+#exec --no-startup-id picom -f -b --config ~/.config/picom/picom.conf
+exec --no-startup-id xcompmgr -c -f
 
 # Restor Wallpaper
 exec --no-startup-id nitrogen --restore
