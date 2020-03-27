@@ -1,0 +1,16 @@
+
+for i in *.yaml; do
+  name="$(echo $i | cut -f 1 -d '.').conf" 
+  sed -e 's/^[ \t]*//g' -e 's/:[ \t]*/ /g' -e "s/'0x/#/g" -e "s/'//g" \
+  -e '0,/black/s/black/color0/' -e 's/black/color8/' \
+  -e '0,/red/s/red/color1/' -e 's/red/color9/' \
+  -e '0,/green/s/green/color2/' -e 's/green/color10/' \
+  -e '0,/yellow/s/yellow/color3/' -e 's/yellow/color11/' \
+  -e '0,/blue/s/blue/color4/' -e 's/blue/color12/' \
+  -e '0,/magenta/s/magenta/color5/' -e 's/magenta/color13/' \
+  -e '0,/cyan/s/cyan/color6/' -e 's/cyan/color14/' \
+  -e '0,/white/s/white/color7/' -e 's/white/color15/' \
+  $i \
+  | egrep -iE "back|fore|color[0-9]" \
+  > $name
+done
