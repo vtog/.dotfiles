@@ -65,7 +65,6 @@ alias reload='. ~/.zshrc'
 alias pmu='sudo pacman -Syy && sudo pkgfile --update'
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dotss='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME status'
-alias dotsc='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME commit -a -m '
 alias gs='git status'
 alias gl="git log --graph --decorate --all --format=format:'%C(bold green)%h%C(reset) - %C(bold cyan)%ai%C(reset) %C(auto)%d%C(reset): ''%C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
 
