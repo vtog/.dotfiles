@@ -63,7 +63,8 @@ alias la='ls -algh --group-directories-first'
 alias ll='ls -lgh --group-directories-first'
 alias reload='. ~/.zshrc'
 alias pmu='sudo pacman -Syy && sudo pkgfile --update'
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME status'
+alias dotc='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME commit -a -m'
 alias gs='git status'
 alias gl="git log --graph --decorate --all --format=format:'%C(bold green)%h%C(reset) - %C(bold cyan)%ai%C(reset) %C(auto)%d%C(reset): ''%C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
 
@@ -86,7 +87,7 @@ ZSH_HIGHLIGHT_STYLES[path_prefix]='none'
 SPACESHIP_PROMPT_ADD_NEWLINE=true
 SPACESHIP_PROMPT_SEPARATE_LINE=true
 SPACESHIP_PROMPT_FIRST_PREFIX_SHOW=true
-SPACESHIP_CHAR_SYMBOL=❯
+SPACESHIP_CHAR_SYMBOL="❯"
 SPACESHIP_CHAR_SUFFIX=" "
 SPACESHIP_CHAR_COLOR_SUCCESS=10
 SPACESHIP_CHAR_COLOR_FAILURE=9
@@ -94,11 +95,11 @@ SPACESHIP_CHAR_COLOR_SECONDARY=11
 SPACESHIP_USER_SHOW=always
 SPACESHIP_USER_PREFIX="["
 SPACESHIP_USER_SUFFIX=""
-SPACESHIP_USER_COLOR=12
+SPACESHIP_USER_COLOR=2
 SPACESHIP_USER_COLOR_ROOT=1
 SPACESHIP_HOST_SHOW=always
 SPACESHIP_HOST_PREFIX="@"
-SPACESHIP_HOST_SUFFIX=" "
+SPACESHIP_HOST_SUFFIX=""
 SPACESHIP_HOST_COLOR=12
 SPACESHIP_HOST_COLOR_SSH=12
 SPACESHIP_DIR_PREFIX=" "
