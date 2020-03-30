@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+sudo reflector --latest 15 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+alias pmu='sudo pacman -Syy && sudo pkgfile --update'
+
