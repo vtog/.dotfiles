@@ -1,8 +1,7 @@
 Setup .dotfiles
 ===============
 
-.. note:: This assumes my "dotfiles" repo exists.
-
+.. note:: This referance's my "dotfiles" repo. I'm also using an alias to manage the .dotfiles, **"dots"**, replace "git with this.
 
 #. Setup
 
@@ -12,7 +11,7 @@ Setup .dotfiles
       rsync --recursive --verbose --exclude '.git' tmpdotfiles/ $HOME/
       rm -rf tmpdotfiles
       source .zshrc
-      dotfiles config --local status.showUntrackedFiles no
+      dots config --local status.showUntrackedFiles no
 
 #. Install SpaceShip Prompt (Arch Linux)
 
