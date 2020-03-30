@@ -13,12 +13,17 @@ SAVEHIST=10000
 HISTFILE=~/.histfile
 
 # Basic auto/tab complete:
-autoload -U compinit
+autoload -Uz compinit
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
+
+if [[ $TERM = xterm-kitty ]]; then
+  kitty + complete setup zsh | source /dev/stdin
+fi
+
 setopt auto_cd
 
 # Vi Mode

@@ -10,6 +10,7 @@ let g:airline_theme = 'codedark'
 let g:one_allow_italics = 1
 
 syntax on
+set nofoldenable
 set encoding=utf-8
 set expandtab
 set tabstop=2
