@@ -1,7 +1,8 @@
 Setup .dotfiles
 ===============
 
-.. note:: This reference's my "dotfiles" repo. I'm also using an alias to manage the .dotfiles, **"dots"**, replace "git with this.
+.. note:: This reference's my "dotfiles" repo. I'm also using an alias to manage the .dotfiles, **"dots"**, replace "git"
+   with this when managing the repo.
 
 #. Setup
 
