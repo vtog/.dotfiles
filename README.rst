@@ -29,3 +29,11 @@ Setup .dotfiles
           https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 
+#. Start VIM and Install/Update plug-ins
+
+   .. code-block:: bash
+
+      vim
+      : PlugInstall
+      : q
+      : q
