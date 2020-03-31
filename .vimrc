@@ -11,6 +11,7 @@ let g:one_allow_italics = 1
 
 syntax on
 set nofoldenable
+set nohls
 set encoding=utf-8
 set expandtab
 set tabstop=2
