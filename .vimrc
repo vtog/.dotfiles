@@ -3,6 +3,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'https://github.com/vim-airline/vim-airline.git'
 Plug 'https://github.com/rakr/vim-one.git'
 Plug 'https://github.com/tomasiser/vim-code-dark.git'
+Plug 'https://github.com/vim-syntastic/syntastic.git'
 
 call plug#end()
 
