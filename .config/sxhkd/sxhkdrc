@@ -4,11 +4,17 @@
 
 # terminal emulator
 super + Return
-	kitty
+	alacritty
 
 # program launcher
 super + @space
 	dmenu_run
+
+super + d
+  rofi -show run -lines 5 -width 15 -opacity "65" \
+  -color-normal "#fdf6e3,#002b36,#00ff00,#9575cd,#ffffff" \
+  -font "DejaVu Sans Mono Display 12"
+  # color = bg,fg,bgalt,hlbg,hlfg
 
 # make sxhkd reload its configuration files:
 super + Escape
