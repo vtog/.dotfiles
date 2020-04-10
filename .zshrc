@@ -87,6 +87,10 @@ typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[path]='none'
 ZSH_HIGHLIGHT_STYLES[path_prefix]='none'
 
+#autoload bashcompinit && bashcompinit
+#complete -C '/usr/local/bin/aws_completer' aws
+source /usr/local/bin/aws_zsh_completer.sh 2>/dev/null
+
 # Configure MY prompt
 SPACESHIP_PROMPT_ADD_NEWLINE=true
 SPACESHIP_PROMPT_SEPARATE_LINE=true
@@ -130,6 +134,3 @@ SPACESHIP_PROMPT_ORDER=(
 autoload -U promptinit; promptinit
 prompt spaceship
 
-#autoload bashcompinit && bashcompinit
-#complete -C '/usr/local/bin/aws_completer' aws
-source /usr/local/bin/aws_zsh_completer.sh 2>/dev/null
