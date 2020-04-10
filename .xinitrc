@@ -1,3 +1,4 @@
 numlockx on
 start-pulseaudio-x11
-exec i3
+picom -f -b
+exec bspwm

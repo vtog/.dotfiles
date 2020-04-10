@@ -130,3 +130,6 @@ SPACESHIP_PROMPT_ORDER=(
 autoload -U promptinit; promptinit
 prompt spaceship
 
+#autoload bashcompinit && bashcompinit
+#complete -C '/usr/local/bin/aws_completer' aws
+source /usr/local/bin/aws_zsh_completer.sh 2>/dev/null
