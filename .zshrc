@@ -71,6 +71,7 @@ alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dotss='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME status'
 alias gs='git status'
 alias gl="git log --graph --decorate --all --format=format:'%C(bold green)%h%C(reset) - %C(bold cyan)%ai%C(reset) %C(auto)%d%C(reset): ''%C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
+alias gsub='git pull && git submodule update --recursive --remote'
 
 # Source configs
 #for f in ~/.config/shellconfig/*; do source "$f"; done
