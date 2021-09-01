@@ -62,6 +62,7 @@ bindkey -s '^l' 'clear\n'
 # Alias's
 alias vi='nvim'
 alias vim='nvim'
+alias cat='bat'
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'
 alias la='ls -algh --group-directories-first'
