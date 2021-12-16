@@ -12,22 +12,22 @@ scrolling:
   #  auto_scroll: false
 
 font:
-  size: 12.0
+  size: 14.0
   normal:
-    family: DejaVu Sans Mono
+    family: DejaVu Sans Mono for Powerline
     style: Book
   bold:
-    family: DejaVu Sans Mono
+    family: DejaVu Sans Mono for Powerline
     style: Bold
   italic:
-    family: DejaVu Sans Mono
-    style: Oblique
+    family: DejaVu Sans Mono for Powerline
+    style: Italic
   bold_italic:
-    family: DejaVu Sans Mono
-    style: Bold Oblique
+    family: DejaVu Sans Mono for Powerline
+    style: Bold Italic
 
 # If `true`, bold text is drawn using the bright color variants.
-draw_bold_text_with_bright_colors: false
+draw_bold_text_with_bright_colors: true
 
 schemes:
   default: &default # Default - Tomorrow Night Bright
@@ -322,12 +322,58 @@ schemes:
       magenta: '0xe500e5'
       cyan:    '0x00e5e5'
       white:   '0xe5e5e5'
+  tango: &tango
+    primary:
+      background: '#000000'
+      foreground: '#00ff00'
+    normal:
+      black:   '#2e3436'
+      red:     '#cc0000'
+      green:   '#73d216'
+      yellow:  '#edd400'
+      blue:    '#3465a4'
+      magenta: '#75507b'
+      cyan:    '#06989a'
+      white:   '#d3d7cf'
+    bright:
+      black:   '#2e3436'
+      red:     '#ef2929'
+      green:   '#8ae234'
+      yellow:  '#fce94f'
+      blue:    '#729fcf'
+      magenta: '#ad7fa8'
+      cyan:    '#34e2e2'
+      white:   '#eeeeec'
+  xterm: &xterm
+    primary:
+      background: '0x1e2127'
+      foreground: '0xabb2bf'
+      #background: '#000000'
+      #foreground: '#ffffff'
+    normal:
+      black:   '#000000'
+      red:     '#cd0000'
+      green:   '#00cd00'
+      yellow:  '#cdcd00'
+      blue:    '#0000ee'
+      magenta: '#cd00cd'
+      cyan:    '#00cdcd'
+      white:   '#e5e5e5'
+    bright:
+      black:   '#7f7f7f'
+      red:     '#ff0000'
+      green:   '#00ff00'
+      yellow:  '#ffff00'
+      blue:    '#5c5cff'
+      magenta: '#ff00ff'
+      cyan:    '#00ffff'
+      white:   '#ffffff'
 
-colors: *termapp
+colors: *xterm
 
 
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.9
+window_opacity: 0.9
 
 selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
@@ -357,11 +403,6 @@ live_config_reload: true
 mouse:
   # If this is `true`, the cursor is temporarily hidden when typing.
   hide_when_typing: false
-
-  url:
-    launcher:
-      program: xdg-open
-      args: []
 
 mouse_bindings:
   - { mouse: Middle, action: PasteSelection }
