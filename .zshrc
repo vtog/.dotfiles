@@ -1,16 +1,11 @@
-clear
-neofetch
-
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
 
 # Enable colors and change prompt:
 autoload -U colors && colors
 
 # History in cache directory:
+HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
-HISTFILE=~/.histfile
 
 # Basic auto/tab complete:
 autoload -Uz compinit
@@ -18,26 +13,18 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 zmodload zsh/complist
 compinit
-_comp_options+=(globdots)		# Include hidden files.
-
-if [[ $TERM = xterm-kitty ]]; then
-  kitty + complete setup zsh | source /dev/stdin
-fi
-
-setopt auto_cd
+_comp_options+=(globdots)            # Include hidden files.
+setopt appendhistory autocd beep extendedglob nomatch notify
 
 # Vi Mode
 bindkey -v
 export KEYTIMEOUT=5
 bindkey "^?" backward-delete-char
-bindkey "^[[1~" beginning-of-line    # HOME key (putty)
-bindkey "^[[H" beginning-of-line     # HOME key (st / termite)
-bindkey "^[[4~" end-of-line          # END key (putty / st)
-bindkey "^[[F" end-of-line           # END key (termite)
-bindkey "^[[3~" delete-char          # DEL key (putty / termite)
-bindkey "^[[P" delete-char           # DEL key (st)
-bindkey "^[[5~" beginning-of-line    # PGUP key (putty / st / termite)
-bindkey "^[[6~" end-of-line          # PGDN key (putty / st / termite)
+bindkey "^[[H" beginning-of-line     # HOME key
+bindkey "^[[F" end-of-line           # END key
+bindkey "^[[3~" delete-char          # DEL key
+bindkey "^[[5~" beginning-of-line    # PGUP key
+bindkey "^[[6~" end-of-line          # PGDN key
 
 # Adds a notification on the right hand side of the prompt when in Normal mode
 function zle-line-init zle-keymap-select {
@@ -51,8 +38,7 @@ zle -N zle-keymap-select
 # Edit line in vim buffer ctrl-e
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
-bindkey '^[[2~' edit-command-line    # INS key (putty / termite)
-bindkey '^[[4h' edit-command-line    # INS key (st)
+bindkey '^[[2~' edit-command-line    # INS key
 
 # Bindkey's
 bindkey '^r' history-incremental-pattern-search-backward
@@ -62,7 +48,7 @@ bindkey -s '^l' 'clear\n'
 # Alias's
 alias vi='nvim'
 alias vim='nvim'
-alias cat='bat'
+#alias cat='bat'
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'
 alias la='ls -algh --group-directories-first'
@@ -74,9 +60,6 @@ alias gs='git status'
 alias gl="git log --graph --decorate --all --format=format:'%C(bold green)%h%C(reset) - %C(bold cyan)%ai%C(reset) %C(auto)%d%C(reset): ''%C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
 alias gsub='git pull && git submodule update --recursive --remote'
 alias mdocs='make -C docs clean html'
-
-# Source configs
-#for f in ~/.config/shellconfig/*; do source "$f"; done
 
 # Load zsh-syntax-highlighting
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
@@ -136,4 +119,10 @@ SPACESHIP_PROMPT_ORDER=(
 # Spaceship Prompt
 autoload -U promptinit; promptinit
 prompt spaceship
+
+
+
+#zstyle :compinstall filename '/home/vtognaci/.zshrc'
+
+
 
