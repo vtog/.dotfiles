@@ -120,9 +120,3 @@ SPACESHIP_PROMPT_ORDER=(
 autoload -U promptinit; promptinit
 prompt spaceship
 
-
-
-#zstyle :compinstall filename '/home/vtognaci/.zshrc'
-
-
-

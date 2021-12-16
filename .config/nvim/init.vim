@@ -1,1 +1,1 @@
-/home/vince/.vimrc
+/home/vtognaci/.vimrc
