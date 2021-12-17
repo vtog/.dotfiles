@@ -14,7 +14,7 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)            # Include hidden files.
-setopt appendhistory autocd beep extendedglob nomatch notify
+setopt appendhistory auto_cd beep extended_glob nomatch notify
 
 # Vi Mode
 bindkey -v
@@ -79,21 +79,21 @@ source /usr/local/bin/aws_zsh_completer.sh 2>/dev/null
 
 # Configure MY prompt
 SPACESHIP_PROMPT_ADD_NEWLINE=true
-SPACESHIP_PROMPT_SEPARATE_LINE=true
+SPACESHIP_PROMPT_SEPARATE_LINE=false
 SPACESHIP_PROMPT_FIRST_PREFIX_SHOW=true
 SPACESHIP_CHAR_SYMBOL="❯"
 SPACESHIP_CHAR_SUFFIX=" "
 SPACESHIP_CHAR_COLOR_SUCCESS=10
 SPACESHIP_CHAR_COLOR_FAILURE=9
 SPACESHIP_CHAR_COLOR_SECONDARY=11
-SPACESHIP_USER_SHOW=always
+SPACESHIP_USER_SHOW=true
 SPACESHIP_USER_PREFIX="["
-SPACESHIP_USER_SUFFIX=" "
+SPACESHIP_USER_SUFFIX=""
 SPACESHIP_USER_COLOR=2
 SPACESHIP_USER_COLOR_ROOT=1
 SPACESHIP_HOST_SHOW=true
 SPACESHIP_HOST_PREFIX="@"
-SPACESHIP_HOST_SUFFIX=""
+SPACESHIP_HOST_SUFFIX=" "
 SPACESHIP_HOST_COLOR=4
 SPACESHIP_HOST_COLOR_SSH=4
 SPACESHIP_DIR_PREFIX="["
