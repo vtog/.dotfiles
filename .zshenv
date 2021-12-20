@@ -2,8 +2,9 @@ export PATH=~/.local/bin:~/.scripts:$PATH
 export EDITOR=nvim
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-# Disable OpenGL for Alacritty Terminal on VM
-export LIBGL_ALWAYS_SOFTWARE=1
+
+# Disable OpenGL for Alacritty for Virtual Machine, set to "1"
+export LIBGL_ALWAYS_SOFTWARE=0
 
 # Less Colors for Man Pages
 #export LESS_TERMCAP_mb=$'\e[01;31m'       # start blinking
