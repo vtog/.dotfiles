@@ -1,8 +1,8 @@
 Setup .dotfiles
 ===============
 
-.. note:: This reference's my "dotfiles" repo. I'm also using an alias to manage the .dotfiles,
-   **"dots"**, replace **"git"** with this when managing the repo.
+.. note:: This reference's my "dotfiles" repo. I'm using **"dots"** as an alias for **"git"**
+   to manage the .dotfiles. This was added to .zshenv.
 
 #. Setup
 
