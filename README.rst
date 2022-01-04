@@ -1,8 +1,8 @@
 Setup .dotfiles
 ===============
 
-.. note:: This reference's my "dotfiles" repo. I'm also using an alias to manage the .dotfiles, **"dots"**, replace "git"
-   with this when managing the repo.
+.. note:: This reference's my "dotfiles" repo. I'm also using an alias to manage the .dotfiles,
+   **"dots"**, replace **"git"** with this when managing the repo.
 
 #. Setup
 
@@ -14,13 +14,12 @@ Setup .dotfiles
       source .zshrc
       dots config --local status.showUntrackedFiles no
 
-#. Install SpaceShip Prompt (Arch Linux)
+#. Install SpaceShip Prompt (RHEL)
 
    .. code-block:: bash
-
-      git clone https://aur.archlinux.org/spaceship-prompt-git.git
-      cd spaceship-prompt-git
-      makepkg -si
+   
+      git clone https://github.com/spaceship-prompt/spaceship-prompt.git --depth=1
+      sudo ln -sf ~/git/spaceship-prompt/spaceship.zsh /usr/local/share/zsh/site-functions/prompt_spaceship_setup
 
 #. Install vim-plug (neovim)
 
