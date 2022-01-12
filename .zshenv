@@ -7,6 +7,7 @@ export PATH
 export EDITOR=nvim
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export WINIT_UNIX_BACKEND=x11
 
 # Disable OpenGL for Alacritty for Virtual Machine, set to "1"
 export LIBGL_ALWAYS_SOFTWARE=0
