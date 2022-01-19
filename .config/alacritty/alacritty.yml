@@ -1,7 +1,9 @@
 window:
   #title: Alacritty
-  opacity: 0.0
+  opacity: 0.95
   dynamic_title: true
+
+background_opacity: 0.95
 
 scrolling:
   history: 10000
@@ -417,6 +419,28 @@ schemes:
       magenta: '#8c738c'
       cyan:    '#6d96a5'
       white:   '#aeb3bb'
+  vimcodedark: &vimcodedark
+    primary:
+      background: '#232729'
+      foreground: '#eeeee7'
+    normal:
+      black:   '#1E1E1E'
+      red:     '#262626'
+      green:   '#303030'
+      yellow:  '#3C3C3C'
+      blue:    '#808080'
+      magenta: '#D4D4D4'
+      cyan:    '#E9E9E9'
+      white:   '#FFFFFF'
+    bright:
+      black:   '#D16969'
+      red:     '#B5CEA8'
+      green:   '#D7BA7D'
+      yellow:  '#608B4E'
+      blue:    '#9CDCFE'
+      magenta: '#569CD6'
+      cyan:    '#C586C0'
+      white:   '#CE9178'
 
 colors: *tango
 
