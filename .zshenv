@@ -30,3 +30,4 @@ export LESS_TERMCAP_us=$(tput smul; tput bold; tput setaf 1) # start underline -
 export LESS_TERMCAP_ue=$(tput sgr0)                          # stop underline
 export LESS_TERMCAP_me=$(tput sgr0)                          # turn off bold, blink and underline
 
+. "$HOME/.cargo/env"

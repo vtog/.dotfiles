@@ -3,8 +3,6 @@ window:
   opacity: 0.95
   dynamic_title: true
 
-background_opacity: 0.95
-
 scrolling:
   history: 10000
 
