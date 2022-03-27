@@ -2,6 +2,9 @@ window:
   #title: Alacritty
   opacity: 0.95
   dynamic_title: true
+  dimensions:
+    columns: 120
+    lines: 40
 
 scrolling:
   history: 10000
