@@ -26,6 +26,11 @@ bindkey "^[[3~" delete-char          # DEL key
 bindkey "^[[5~" beginning-of-line    # PGUP key
 bindkey "^[[6~" end-of-line          # PGDN key
 
+# Automaticly update window title with directory
+function precmd () {
+  echo -ne "\033]0;$(pwd | sed -e "s;^$HOME;~;")\a"
+}
+
 # Adds a notification on the right hand side of the prompt when in Normal mode
 function zle-line-init zle-keymap-select {
     VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]% %{$reset_color%}"
