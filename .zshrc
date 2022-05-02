@@ -26,9 +26,9 @@ bindkey "^[[3~" delete-char          # DEL key
 bindkey "^[[5~" beginning-of-line    # PGUP key
 bindkey "^[[6~" end-of-line          # PGDN key
 
-# Automaticly update window title with directory
+# Automaticly update terminal window title with directory
 function precmd () {
-  echo -ne "\033]0;$(pwd | sed -e "s;^$HOME;~;")\a"
+  echo -ne "\033]0;$USER:$(pwd | sed -e "s;^$HOME;~;")\a"
 }
 
 # Adds a notification on the right hand side of the prompt when in Normal mode
