@@ -1,14 +1,14 @@
 [global_config]
   putty_paste_style = True
 [keybindings]
-  page_down = None
 [profiles]
   [[default]]
     background_color = "#232729"
     background_darkness = 0.95
     background_type = transparent
+    cursor_color = "#EEEEE7"
     font = DejaVu Sans Mono for Powerline 12
-    foreground_color = "#eeeee7"
+    foreground_color = "#EEEEE7"
     show_titlebar = False
     scrollbar_position = hidden
     scrollback_lines = 1000000
