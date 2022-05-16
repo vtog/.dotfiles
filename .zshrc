@@ -28,7 +28,8 @@ bindkey "^[[6~" end-of-line          # PGDN key
 
 # Automaticly update terminal window title with directory
 function precmd () {
-  echo -ne "\033]0;$USER@$HOSTNAME:$(pwd | sed -e "s;^$HOME;~;")\a"
+  #echo -ne "\033]0;${USER}@${HOSTNAME}: $(pwd | sed -e "s;^$HOME;~;")\a"
+  echo -ne "\033]0;${USER}@${HOSTNAME}\a"
 }
 
 # Adds a notification on the right hand side of the prompt when in Normal mode
