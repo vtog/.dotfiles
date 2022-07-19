@@ -73,15 +73,16 @@ alias mdocs='make -C docs clean html'
 source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh 2>/dev/null
 # Search repos for programs that can't be found
 source /usr/share/doc/pkgfile/command-not-found.zsh 2>/dev/null
+# OpenShift auto complet
+source /usr/share/zsh/site-functions/_oc
+#autoload bashcompinit && bashcompinit
+#complete -C '/usr/local/bin/aws_completer' aws
+source /usr/local/bin/aws_zsh_completer.sh 2>/dev/null
 
 # Syntax highlighting customization
 typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[path]='none'
 ZSH_HIGHLIGHT_STYLES[path_prefix]='none'
-
-#autoload bashcompinit && bashcompinit
-#complete -C '/usr/local/bin/aws_completer' aws
-source /usr/local/bin/aws_zsh_completer.sh 2>/dev/null
 
 # Configure MY prompt
 SPACESHIP_PROMPT_ADD_NEWLINE=true
