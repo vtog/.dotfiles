@@ -11,6 +11,7 @@ let g:airline_theme = 'codedark'
 let g:one_allow_italics = 1
 
 syntax on
+set mouse=
 set nofoldenable
 set nohls
 set encoding=utf-8
