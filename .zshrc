@@ -74,7 +74,7 @@ source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh 2>/de
 # Search repos for programs that can't be found
 source /usr/share/doc/pkgfile/command-not-found.zsh 2>/dev/null
 # OpenShift auto complet
-source /usr/share/zsh/site-functions/_oc
+source /usr/share/zsh/site-functions/_oc 2>/dev/null
 #autoload bashcompinit && bashcompinit
 #complete -C '/usr/local/bin/aws_completer' aws
 source /usr/local/bin/aws_zsh_completer.sh 2>/dev/null
