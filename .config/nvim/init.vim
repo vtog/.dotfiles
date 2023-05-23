@@ -23,6 +23,8 @@ set autoindent
 set smartindent
 set copyindent
 set nowrap
+set cursorcolumn
+set cursorline
 set pastetoggle=<F3>
 set termguicolors
 colorscheme codedark
