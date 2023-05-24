@@ -9,6 +9,7 @@ call plug#end()
 
 let g:airline_theme = 'codedark'
 let g:one_allow_italics = 1
+colorscheme codedark
 
 syntax on
 set mouse=
@@ -24,8 +25,8 @@ set smartindent
 set copyindent
 set nowrap
 set cursorcolumn
+highlight CursorColumn guibg=#232729
 set cursorline
+highlight CursorLine guibg=#232729
 set pastetoggle=<F3>
 set termguicolors
-colorscheme codedark
-
