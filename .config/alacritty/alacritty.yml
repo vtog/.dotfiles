@@ -1,5 +1,10 @@
 window:
-  title: Alacritty
+  #title: Alacritty
+  opacity: 0.95
+  dynamic_title: true
+  dimensions:
+    columns: 120
+    lines: 40
 
 scrolling:
   history: 10000
@@ -8,26 +13,23 @@ scrolling:
   # scrollback is enabled (history > 0).
   multiplier: 3
 
-  # Scroll to the bottom when new text is written to the terminal.
-  #  auto_scroll: false
-
 font:
   size: 12.0
   normal:
-    family: DejaVu Sans Mono
+    family: DejaVu Sans Mono for Powerline
     style: Book
   bold:
-    family: DejaVu Sans Mono
+    family: DejaVu Sans Mono for Powerline
     style: Bold
   italic:
-    family: DejaVu Sans Mono
-    style: Oblique
+    family: DejaVu Sans Mono for Powerline
+    style: Italic
   bold_italic:
-    family: DejaVu Sans Mono
-    style: Bold Oblique
+    family: DejaVu Sans Mono for Powerline
+    style: Bold Italic
 
 # If `true`, bold text is drawn using the bright color variants.
-draw_bold_text_with_bright_colors: false
+draw_bold_text_with_bright_colors: true
 
 schemes:
   default: &default # Default - Tomorrow Night Bright
@@ -322,12 +324,126 @@ schemes:
       magenta: '0xe500e5'
       cyan:    '0x00e5e5'
       white:   '0xe5e5e5'
+  tango: &tango # Match gnome
+    primary:
+      #background: '#000000'
+      background: '#232729'
+      #foreground: '#ffffff'
+      foreground: '#eeeee7'
+    normal:
+      black:   '#2E3436'
+      red:     '#CC0000'
+      green:   '#4E9A06'
+      yellow:  '#C4A000'
+      blue:    '#3465A4'
+      magenta: '#75507B'
+      cyan:    '#06989A'
+      white:   '#D3D7CF'
+    bright:
+      black:   '#555754'
+      red:     '#Ef2929'
+      green:   '#8AE234'
+      yellow:  '#FCE94F'
+      blue:    '#729FCF'
+      magenta: '#AD7FA8'
+      cyan:    '#34E2E2'
+      white:   '#EEEEEC'
+  xterm: &xterm
+    primary:
+      background: '0x1e2127'
+      foreground: '0xabb2bf'
+      #background: '#000000'
+      #foreground: '#ffffff'
+    normal:
+      black:   '#000000'
+      red:     '#cd0000'
+      green:   '#00cd00'
+      yellow:  '#cdcd00'
+      blue:    '#0000ee'
+      magenta: '#cd00cd'
+      cyan:    '#00cdcd'
+      white:   '#e5e5e5'
+    bright:
+      black:   '#7f7f7f'
+      red:     '#ff0000'
+      green:   '#00ff00'
+      yellow:  '#ffff00'
+      blue:    '#5c5cff'
+      magenta: '#ff00ff'
+      cyan:    '#00ffff'
+      white:   '#ffffff'
+  nord: &nord
+    primary:
+      background: '#2e3440'
+      foreground: '#d8dee9'
+      dim_foreground: '#a5abb6'
+    cursor:
+      text: '#2e3440'
+      cursor: '#d8dee9'
+    vi_mode_cursor:
+      text: '#2e3440'
+      cursor: '#d8dee9'
+    selection:
+      text: CellForeground
+      background: '#4c566a'
+    search:
+      matches:
+        foreground: CellBackground
+        background: '#88c0d0'
+      bar:
+        background: '#434c5e'
+        foreground: '#d8dee9'
+    normal:
+      black:   '#3b4252'
+      red:     '#bf616a'
+      green:   '#a3be8c'
+      yellow:  '#ebcb8b'
+      blue:    '#81a1c1'
+      magenta: '#b48ead'
+      cyan:    '#88c0d0'
+      white:   '#e5e9f0'
+    bright:
+      black:   '#4c566a'
+      red:     '#bf616a'
+      green:   '#a3be8c'
+      yellow:  '#ebcb8b'
+      blue:    '#81a1c1'
+      magenta: '#b48ead'
+      cyan:    '#8fbcbb'
+      white:   '#eceff4'
+    dim:
+      black:   '#373e4d'
+      red:     '#94545d'
+      green:   '#809575'
+      yellow:  '#b29e75'
+      blue:    '#68809a'
+      magenta: '#8c738c'
+      cyan:    '#6d96a5'
+      white:   '#aeb3bb'
+  vimcodedark: &vimcodedark
+    primary:
+      background: '#232729'
+      foreground: '#eeeee7'
+    normal:
+      black:   '#1E1E1E'
+      red:     '#262626'
+      green:   '#303030'
+      yellow:  '#3C3C3C'
+      blue:    '#808080'
+      magenta: '#D4D4D4'
+      cyan:    '#E9E9E9'
+      white:   '#FFFFFF'
+    bright:
+      black:   '#D16969'
+      red:     '#B5CEA8'
+      green:   '#D7BA7D'
+      yellow:  '#608B4E'
+      blue:    '#9CDCFE'
+      magenta: '#569CD6'
+      cyan:    '#C586C0'
+      white:   '#CE9178'
 
-colors: *termapp
-
-
-# The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.9
+colors: *tango
 
 selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
@@ -335,17 +451,15 @@ selection:
   # When set to `true`, selected text will be copied to the primary clipboard.
   save_to_clipboard: true
 
-# Allow terminal applications to change Alacritty's window title.
-dynamic_title: true
-
-#cursor:
+cursor:
   # Cursor style
   #
   # Values for `style`:
   #   - ▇ Block
   #   - _ Underline
   #   - | Beam
-  #style: Block
+  style:
+    blinking: Always
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
@@ -358,13 +472,8 @@ mouse:
   # If this is `true`, the cursor is temporarily hidden when typing.
   hide_when_typing: false
 
-  url:
-    launcher:
-      program: xdg-open
-      args: []
-
 mouse_bindings:
-  - { mouse: Middle, action: PasteSelection }
+  - { mouse: Right, action: PasteSelection }
 
 # Key bindings
 #
