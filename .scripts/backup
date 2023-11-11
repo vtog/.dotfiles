@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+tar --exclude="*.tar.gz" --exclude "*tar" --exclude="*.iso" -czvf $HOME/$(date +'%Y%m%d-backup.tar.gz') $HOME/libvirt $HOME/OCP /etc/named*
+
