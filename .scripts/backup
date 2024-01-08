@@ -1,4 +1,10 @@
 #!/bin/zsh
+#
+backupFile=$HOME/$(date +'%Y%m%d-'$(hostname --short)'-backup.tar.gz')
 
-tar --exclude="*.tar.gz" --exclude "*tar" --exclude="*.iso" -czvf $HOME/$(date +'%Y%m%d-backup.tar.gz') $HOME/libvirt $HOME/OCP /etc/named*
+tar --exclude="*.tar.gz" --exclude "*tar" --exclude="*.iso" -czvf $backupFile \
+$HOME/libvirt $HOME/OCP /etc/named*
 
+if [ -d /mnt/perl ]; then
+  mv $backupFile /mnt/perl
+fi
