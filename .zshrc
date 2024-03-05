@@ -63,6 +63,8 @@ alias neofetch='clear && neofetch'
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias gs='git status'
 alias gl="git log --graph --decorate --all --format=format:'%C(bold green)%h%C(reset) - %C(bold cyan)%ai%C(reset) %C(auto)%d%C(reset): ''%C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
+alias cat='bat'
+alias top='btop'
 
 # Load zsh-syntax-highlighting
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null

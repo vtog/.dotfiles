@@ -1,2 +1,2 @@
 ---
-wayland_default: false
+wayland_default: true
