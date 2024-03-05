@@ -54,7 +54,6 @@ bindkey -s '^l' 'clear\n'
 # Alias's
 alias vi='nvim'
 alias vim='nvim'
-#alias cat='bat'
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'
 alias la='ls -aloh --group-directories-first --time-style=long-iso'
@@ -64,11 +63,12 @@ alias neofetch='clear && neofetch'
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias gs='git status'
 alias gl="git log --graph --decorate --all --format=format:'%C(bold green)%h%C(reset) - %C(bold cyan)%ai%C(reset) %C(auto)%d%C(reset): ''%C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
-alias gsub='git pull && git submodule update --recursive --remote'
-alias mdocs='make -C docs clean html'
+alias cat='bat'
+alias top='btop'
 
 # Load zsh-syntax-highlighting
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+#source /home/vince/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 # Suggest aliases for commands
 source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh 2>/dev/null
 # Search repos for programs that can't be found

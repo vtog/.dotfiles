@@ -7,19 +7,15 @@ export PATH
 export EDITOR=nvim
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-export WINIT_UNIX_BACKEND=x11
-
-# Disable OpenGL for Alacritty for Virtual Machine, set to "1"
-export LIBGL_ALWAYS_SOFTWARE=0
 
 # Less Colors for Man Pages
-#export LESS_TERMCAP_mb=$'\e[01;31m'       # start blinking
-#export LESS_TERMCAP_md=$'\e[01;38;5;74m'  # start bold
-#export LESS_TERMCAP_me=$'\e[0m'           # turn off bold, blink and underline
-#export LESS_TERMCAP_se=$'\e[0m'           # stop standout
-#export LESS_TERMCAP_so=$'\e[38;5;246m'    # start standout
-#export LESS_TERMCAP_ue=$'\e[0m'           # stop underline
-#export LESS_TERMCAP_us=$'\e[04;38;5;146m' # start underline
+export LESS_TERMCAP_mb=$'\e[01;31m'       # start blinking
+export LESS_TERMCAP_md=$'\e[01;38;5;74m'  # start bold
+export LESS_TERMCAP_me=$'\e[0m'           # turn off bold, blink and underline
+export LESS_TERMCAP_se=$'\e[0m'           # stop standout
+export LESS_TERMCAP_so=$'\e[38;5;246m'    # start standout
+export LESS_TERMCAP_ue=$'\e[0m'           # stop underline
+export LESS_TERMCAP_us=$'\e[04;38;5;146m' # start underline
 
 
 #export LESS_TERMCAP_mb=$(tput bold; tput setaf 1)            # start blinking - red

@@ -4,6 +4,7 @@ Plug 'https://github.com/vim-airline/vim-airline.git'
 Plug 'https://github.com/rakr/vim-one.git'
 Plug 'https://github.com/tomasiser/vim-code-dark.git'
 Plug 'https://github.com/dense-analysis/ale.git'
+Plug 'https://github.com/nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
 
@@ -30,3 +31,4 @@ set cursorline
 highlight CursorLine guibg=#232729
 set pastetoggle=<F3>
 set termguicolors
+

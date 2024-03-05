@@ -7,7 +7,7 @@
     background_darkness = 1
     background_type = transparent
     cursor_color = "#EEEEE7"
-    font = DejaVu Sans Mono for Powerline 12
+    font = DejaVu Sans Mono for Powerline 13
     foreground_color = "#EEEEE7"
     show_titlebar = False
     scrollbar_position = hidden
