@@ -29,6 +29,5 @@ set cursorcolumn
 highlight CursorColumn guibg=#232729
 set cursorline
 highlight CursorLine guibg=#232729
-set pastetoggle=<F3>
 set termguicolors
 

@@ -56,15 +56,13 @@ alias vi='nvim'
 alias vim='nvim'
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'
-alias la='ls -aloh --group-directories-first --time-style=long-iso'
-alias ll='ls -loh --group-directories-first --time-style=long-iso'
+alias la='ls -alh --group-directories-first --time-style=long-iso'
+alias ll='ls -lh --group-directories-first --time-style=long-iso'
 alias reload='. ~/.zshrc'
 alias neofetch='clear && neofetch'
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias gs='git status'
 alias gl="git log --graph --decorate --all --format=format:'%C(bold green)%h%C(reset) - %C(bold cyan)%ai%C(reset) %C(auto)%d%C(reset): ''%C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
-alias cat='bat'
-alias top='btop'
 
 # Load zsh-syntax-highlighting
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
