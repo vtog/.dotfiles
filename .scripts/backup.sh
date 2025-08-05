@@ -1,11 +1,12 @@
-#!/bin/zsh
+#!/bin/bash
 
 backupFile=$HOME/$(date +'%Y%m%d-'$(hostname --short)'-backup.tar.gz')
 
-list=$(ls -d $HOME/libvirt/ -d $HOME/OCP/ -d /etc/named/ -f /mirror/oc-mirror/*.{sh,yaml} \
-  -f /etc/named.conf -f /etc/chrony.conf -f /etc/hosts -f /opt/AdGuardHome/AdGuardHome.yaml \
+list=$(ls -d $HOME/libvirt/ -d $HOME/OCP/ -d /etc/named/ -f /etc/named.conf \
+  -f /etc/chrony.conf -f /etc/hosts \
+  -f /mirror/oc-mirror/*.{sh,yaml} -f /opt/AdGuardHome/AdGuardHome.yaml \
   2>/dev/null)
-echo "\nFound the following for backup:\n\n$list\n"
+echo -e "\nFound the following for backup:\n\n$list\n"
 
 echo $list | xargs tar --exclude="*.tar.gz" --exclude "*tar" --exclude="*.iso" --exclude="*.raw" \
   --exclude="*.qcow2" --exclude="*.img" --exclude="openshift-install*" --exclude="cache" \
