@@ -2,7 +2,8 @@
 
 backupFile=$HOME/$(date +'%Y%m%d-'$(hostname --short)'-backup.tar.gz')
 
-list=$(ls -d $HOME/libvirt/ -d $HOME/OCP/ -d $HOME/Documents -d $HOME/Downloads \
+list=$(ls -d $HOME/libvirt/ -d $HOME/OCP/ -d $HOME/Documents \
+  -d $HOME/Desktop -d $HOME/Pictures -d $HOME/Videos -d $HOME/Downloads \
   -d /etc/named/ -f /etc/named.conf -f /etc/chrony.conf -f /etc/hosts \
   -f /mirror/oc-mirror/*.{sh,yaml} -f /opt/AdGuardHome/AdGuardHome.yaml \
   2>/dev/null)
