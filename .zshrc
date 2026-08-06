@@ -20,8 +20,8 @@ setopt appendhistory auto_cd beep extended_glob nomatch notify
 bindkey -v
 export KEYTIMEOUT=5
 bindkey "^?" backward-delete-char
-bindkey "^[[H" beginning-of-line     # HOME key
-bindkey "^[[F" end-of-line           # END key
+bindkey "^[OH" beginning-of-line     # HOME key
+bindkey "^[OF" end-of-line           # END key
 bindkey "^[[3~" delete-char          # DEL key
 bindkey "^[[5~" beginning-of-line    # PGUP key
 bindkey "^[[6~" end-of-line          # PGDN key
