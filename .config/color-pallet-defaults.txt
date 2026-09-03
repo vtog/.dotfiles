@@ -19,6 +19,9 @@ cursor_color = "#EEEEE7"
 #34e2e2
 #eeeeec
 
+# Show control-characters
+
+cat -v
 
 INS  = ^[[2~
 DEL  = ^[[3~
