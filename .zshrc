@@ -20,8 +20,8 @@ setopt appendhistory auto_cd beep extended_glob nomatch notify
 bindkey -v
 export KEYTIMEOUT=5
 bindkey "^?" backward-delete-char
-bindkey "^[[H" beginning-of-line     # HOME key
-bindkey "^[[F" end-of-line           # END key
+bindkey "^[OH" beginning-of-line     # HOME key
+bindkey "^[OF" end-of-line           # END key
 bindkey "^[[3~" delete-char          # DEL key
 bindkey "^[[5~" beginning-of-line    # PGUP key
 bindkey "^[[6~" end-of-line          # PGDN key
@@ -59,10 +59,11 @@ alias ls='ls --color=auto'
 alias la='ls -alh --group-directories-first --time-style=long-iso'
 alias ll='ls -lh --group-directories-first --time-style=long-iso'
 alias reload='. ~/.zshrc'
-alias neofetch='clear && neofetch'
+alias fastfetch='clear && fastfetch'
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias gs='git status'
 alias gl="git log --graph --decorate --all --format=format:'%C(bold green)%h%C(reset) - %C(bold cyan)%ai%C(reset) %C(auto)%d%C(reset): ''%C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
+alias docker=podman
 
 # Load zsh-syntax-highlighting
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null

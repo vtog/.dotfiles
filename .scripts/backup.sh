@@ -2,15 +2,17 @@
 
 backupFile=$HOME/$(date +'%Y%m%d-'$(hostname --short)'-backup.tar.gz')
 
-list=$(ls -d $HOME/libvirt/ -d $HOME/OCP/ \
+list=$(ls -d $HOME/libvirt/ -d $HOME/OCP/ -d $HOME/Documents \
+  -d $HOME/Desktop -d $HOME/Pictures -d $HOME/Videos -d $HOME/Downloads \
   -d /etc/named/ -f /etc/named.conf -f /etc/chrony.conf -f /etc/hosts \
   -f /mirror/oc-mirror/*.{sh,yaml} -f /opt/AdGuardHome/AdGuardHome.yaml \
   2>/dev/null)
 echo -e "\nFound the following for backup:\n\n$list\n"
 
-echo $list | xargs tar --exclude="*.tar.gz" --exclude "*tar" --exclude="*.iso" \
-  --exclude="*.raw" --exclude="*.qcow2" --exclude="*.img" \
+echo $list | xargs tar --exclude="*.tar.gz" --exclude "*tar" --exclude="*.zip" --exclude "*.tgz" --exclude "*.tar.xz" \
+  --exclude="*.iso" --exclude="*.raw" --exclude="*.qcow2" --exclude="*.img" \
   --exclude="openshift-install*" --exclude="cache" --exclude="temp" \
+  --exclude="*.EXE" --exclude="*.exe" --exclude="*.rpm" --exclude="*.com" \
   -czvvf $backupFile \
   2>backup_errors.txt
 
